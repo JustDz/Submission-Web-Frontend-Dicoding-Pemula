@@ -71,7 +71,6 @@ function loadDataFromStorage() {
 }
 
 // Fungsi untuk membuat elemen HTML buku
-// Fungsi untuk membuat elemen HTML buku
 function makeBook(bookObject) {
   const { id, title, author, year, isComplete } = bookObject;
 
