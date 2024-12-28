@@ -1,0 +1,542 @@
+:root {
+  --main-bg: #e5d2b8;
+  --sec-bg: #725c3a;
+  --main-font: #4e3f27;
+  --sec-font: #b3b792;
+  --main-card-bg: #d2a880;
+  --sec-card-bg: #f3eee5;
+  --border: #809671;
+  --positive-bg: #809671;
+  --darker-positive: #6b7e5e;
+  --negative-bg: #d44a47;
+  --darker-negative: #b94d45;
+  --blue-btn: #6888BE;
+  --darker-blue-btn: #233C67;
+  --white-bg: #f5f5f5;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--main-bg);
+  width: 100%;
+  height: 100%;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--sec-bg);
+  padding: 15px 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--sec-card-bg);
+}
+
+/* Search Section */
+.search-section form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-section input {
+  padding: 10px;
+  background-color: var(--sec-card-bg);
+  color: var(--main-font);
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 200px;
+}
+
+.search-section i {
+  font-size: 1.4rem;
+  color: var(--white-bg);
+}
+
+.search-section button {
+  background-color: var(--positive-bg);
+  color: var(--main-card-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 9px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.search-section button:hover {
+  background-color: var(--darker-positive);
+  transform: scale(1.05);
+  color: var(--white-bg);
+}
+
+/* Main Section Layout */
+main {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+.profile-and-add-section {
+  width: 30%;
+}
+
+/* Author Web Profile */
+#authorProfile {
+  background-color: var(--sec-card-bg);
+  color: var(--main-font);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#authorProfile h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#authorProfile p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+#authorProfile p:first-of-type {
+  font-weight: bold;
+}
+
+
+/* Add Book Section */
+.add-book-section {
+  flex: 1;
+  background: var(--sec-card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 280px;
+  height: 60vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  
+}
+
+.add-book-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--main-font);
+}
+
+.add-book-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-book-section input {
+  padding: 10px;
+  border: 2px solid var(--white-bg);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.add-book-section input:focus {
+  border-color: var(--border);
+  outline: none;
+}
+
+.add-book-section input:not(:placeholder-shown) {
+  border-color: var(--border);
+}
+
+.add-book-section p {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--main-font);
+}
+
+/* Input Button Container */
+.input-btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.clear-btn {
+  background-color: var(--negative-bg);
+  color: var(--white-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.clear-btn:hover {
+  background-color: var(--darker-negative);
+}
+
+.add-btn {
+  background-color: var(--positive-bg);
+  color: var(--white-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.add-btn:hover {
+  background-color: var(--darker-positive);
+}
+
+.confirm-edit {
+  background-color: var(--positive-bg);
+  color: var(--white-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.confirm-edit:hover {
+  background-color: var(--darker-positive);
+}
+
+/* Wrapper untuk checkbox dan label */
+.bookForm-isComplete {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+}
+
+.bookForm-isComplete input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.bookForm-isComplete input[type="checkbox"]:checked {
+  background-color: var(--darker-positive);
+  border-color: var(--border);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='white' d='M6.173 11.571l7.818-8.249.92.872-8.739 9.213-4.773-4.62.885-.914z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
+}
+
+.bookForm-isComplete input[type="checkbox"]:hover {
+  border-color: var(--border);
+}
+
+.bookForm-isComplete label {
+  cursor: pointer;
+}
+
+/* Book List Section */
+.book-list-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.book-list-container {
+  display: flex;
+  gap: 20px;
+  width: 70%;
+}
+
+.incomplete-book-section,
+.complete-book-section {
+  flex: 1;
+  background-color: var(--sec-card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  min-width: 365px;
+  min-height: 40px;
+}
+
+.incomplete-book-section h2,
+.complete-book-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--main-font);
+}
+
+#incompleteBookList,
+#completeBookList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Individual Book Item */
+[data-testid="bookItem"] {
+  background-color: var(--main-card-bg);
+  color: var(--main-font);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+[data-testid="bookItem"] .inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+[data-testid="bookItem"] .button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+[data-testid="bookItem"] h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--main-font);
+}
+
+[data-testid="bookItem"] div button {
+  color: var(--white-bg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s ease-in-out;
+}
+
+[data-testid="bookItemIsCompleteButton"] {
+  background-color: var(--positive-bg);
+}
+
+[data-testid="bookItemIsCompleteButton"]:hover {
+  background-color: var(--darker-positive);
+}
+
+/* Button Styling */
+button i {
+  font-size: 1.2rem;
+  color: var(--white-bg);
+}
+
+button:hover i {
+  color: var(--white-bg);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Checklist Button */
+.check-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--positive-bg);
+  color: var(--white-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.check-button:hover {
+  background-color: var(--darker-positive);
+  transform: scale(1.05);
+  transform: rotate(-15deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.check-button:focus {
+  outline: 2px solid var(--positive-bg);
+  outline-offset: 2px;
+}
+
+.check-button i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.check-button:hover i {
+  transform: rotate(15deg);
+  color: var(--white-bg);
+}
+
+.check-button:active {
+  transform: scale(0.95);
+}
+
+/* Edit Button */
+.edit-button {
+  background-color: var(--blue-btn); /* Anda dapat menyesuaikan warna latar belakang sesuai preferensi */
+  color: var(--white-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-button:hover {
+  background-color: var(--darker-blue-btn); /* Menyesuaikan warna latar belakang saat hover */
+  transform: scale(1.05);
+  transform: rotate(-15deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button:focus {
+  outline: 2px solid var(--positive-bg);
+  outline-offset: 2px;
+}
+
+.edit-button:active {
+  transform: scale(0.95);
+}
+
+.edit-button i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.edit-button:hover i {
+  transform: rotate(15deg);
+  color: var(--white-bg);
+}
+
+/* Undo Button */
+.undo-button {
+  background-color: var(--positive-bg);
+  color: var(--white-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.undo-button:hover {
+  background-color: var(--darker-positive);
+  transform: scale(1.05);
+  transform: rotate(-15deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /
+}
+
+.undo-button:focus {
+  outline: 2px solid var(--positive-bg);
+  outline-offset: 2px;
+}
+
+.undo-button:active {
+  transform: scale(0.95); 
+}
+
+.undo-button i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.undo-button:hover i {
+  transform: rotate(15deg); 
+  color: var(--white-bg);
+}
+
+/* Trash Button */
+.trash-button {
+  background-color: var(--negative-bg);
+  color: var(--white-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.trash-button:hover {
+  background-color: var(--darker-negative);
+  transform: scale(1.05);
+  transform: rotate(-15deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.trash-button:focus {
+  outline: 2px solid var(--negative-bg);
+  outline-offset: 2px;
+}
+
+.trash-button:active {
+  transform: scale(0.95); 
+}
+
+.trash-button i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.trash-button:hover i {
+  transform: rotate(15deg); 
+  color: var(--white-bg);
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Dz's Bookshelf</h1>
+
+      <!-- Search Section -->
+      <section class="search-section">
+        <form id="searchBook" data-testid="searchBookForm">
+          <input
+            id="searchBookTitle"
+            type="text"
+            placeholder="Cari Buku ..."
+            data-testid="searchBookFormTitleInput" />
+          <button
+            id="searchSubmit"
+            type="submit"
+            data-testid="searchBookFormSubmitButton">
+            <i class="bx bx-search"></i>
+          </button>
+        </form>
+      </section>
+    </header>
+
+    <main>
+      <div class="profile-and-add-section">
+        <!-- Profile Section -->
+        <section id="authorProfile">
+          <h2>Profil Pembuat Web</h2>
+          <p>Nama: Muhammad Dzaky Arya Saputra Budianto</p>
+          <p>Instagram: @dz_aryas</p>
+          <p>Email: @dz_aryas@gmail.com</p>
+        </section>
+
+        <!-- Add Book Section -->
+        <section class="add-book-section">
+          <h2>Tambah Buku</h2>
+          <form id="bookForm" data-testid="bookForm">
+            <input
+              id="bookFormTitle"
+              type="text"
+              placeholder="Judul Buku"
+              required
+              data-testid="bookFormTitleInput" />
+            <input
+              id="bookFormAuthor"
+              type="text"
+              placeholder="Author"
+              required
+              data-testid="bookFormAuthorInput" />
+            <input
+              id="bookFormYear"
+              type="date"
+              required
+              data-testid="bookFormYearInput" />
+            <div class="bookForm-isComplete">
+              <label for="bookFormIsComplete">Selesai Dibaca</label>
+              <input
+                id="bookFormIsComplete"
+                type="checkbox"
+                data-testid="bookFormIsCompleteCheckbox" />
+            </div>
+
+            <div class="input-btn">
+              <button type="button" id="clearAll" class="clear-btn">
+                Hapus Semua List
+              </button>
+              <button
+                id="bookFormSubmit"
+                type="submit"
+                data-testid="bookFormSubmitButton"
+                class="add-btn">
+                Tambah List
+              </button>
+              <button
+                id="updateButton"
+                type="button"
+                style="display: none"
+                class="confirm-edit">
+                Perbarui Buku
+              </button>
+            </div>
+          </form>
+          <p id="bookCount">
+            Total Buku Yang Ada: <span id="totalBooksCount">0</span>
+          </p>
+        </section>
+      </div>
+
+      <!-- Book List Section -->
+      <div class="book-list-container">
+        <!-- Incomplete Books -->
+        <section class="incomplete-book-section">
+          <h2 id="incompleteBooks">
+            Belum Dibaca: <span id="incompleteBooksCount">0</span>
+          </h2>
+          <div id="incompleteBookList" data-testid="incompleteBookList"></div>
+        </section>
+
+        <!-- Complete Books -->
+        <section class="complete-book-section">
+          <h2 id="completedBooks">
+            Sudah Dibaca: <span id="completedBooksCount">0</span>
+          </h2>
+          <div id="completeBookList" data-testid="completeBookList"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
